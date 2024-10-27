@@ -1,0 +1,49 @@
+{
+    "requests": [
+      {
+        "type": "GET",
+        "description": "This request is used to retrieve data from the server.",
+        "url": "http://localhost:3004/api",
+        "example": {
+          "curl": "curl -X GET http://localhost:3004/api",
+          "response": {
+            "message": "Welcome to the site! You are not a bot."
+          }
+        }
+      },
+      {
+        "type": "POST",
+        "description": "This request is used to send data to the server.",
+        "url": "http://localhost:3004/api",
+        "example": {
+          "curl": "curl -X POST -d '{\"key\":\"value\"}' -H 'Content-Type: application/json' http://localhost:3004/api",
+          "response": {
+            "message": "Data received successfully."
+          }
+        }
+      },
+      {
+        "type": "BLOCK",
+        "description": "This request blocks suspicious bots and IPs.",
+        "url": "http://localhost:3004/api",
+        "example": {
+          "curl": "curl -A 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)' http://localhost:3004/api",
+          "response": {
+            "message": "Access denied for bots."
+          }
+        }
+      },
+      {
+        "type": "OPTIONS",
+        "description": "This request retrieves information about the server's capabilities.",
+        "url": "http://localhost:3004/api",
+        "example": {
+          "curl": "curl -X OPTIONS http://localhost:3004/api",
+          "response": {
+            "allowedMethods": ["GET", "POST", "OPTIONS"]
+          }
+        }
+      }
+    ]
+  }
+  
